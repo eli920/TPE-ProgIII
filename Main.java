@@ -25,6 +25,12 @@ public class Main {
         //Imprimimos soluciones
         solBack.imprimir("Backtracking");
         System.out.println();
-        solGreedy.imprimir("Greedy");
+        //Se corrige código para que muestre mensaje en caso de que no pueda encontrar solución.
+        if (solGreedy != null) {
+            solGreedy.imprimir("Greedy");
+        } else {
+            System.out.println("Greedy no encontró solución.");
+        }
+        
     }
 }

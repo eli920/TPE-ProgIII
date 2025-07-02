@@ -22,7 +22,7 @@ import java.util.List;
     obtener aproximaciones muy buenas, sin embargo hay una serie de problemas para los que se ha demostrado matemáticamente que la solución que se
     da siguiendo la estrategia greedy, siempre es la mejor solución.
     En el algoritmo greedy, es este caso,  si no se logra alcanzar exactamente el número de piezas requerido, se retorna `null` como indicación de que la 
-    estrategia no tuvo éxito.
+    estrategia no tuvo éxito, y un cartel por consola que indica que "greedy no encontró solución".
 
     4-Costo de la solución:
     La cantidad de candidatos considerados (máquinas examinadas) se cuenta en la variable `estados`.
@@ -69,7 +69,7 @@ public class Greedy {
         if (piezasAcumuladas == objetivo) { //Si sale porque se llegó a las piezas objetivo, retornar solución
             return new Solucion(new ArrayList<>(mejorSolucion), piezasAcumuladas, estados);
         } else {
-            return null; // No se pudo cumplir el objetivo exacto con estrategia greedy
+            return null; // Greedy no encontró solución
         }
 
     }
